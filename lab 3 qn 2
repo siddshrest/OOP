@@ -1,0 +1,37 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class Account // creating a class 
+{
+	private:
+		int account_num; // creating 3 data memebers according to qn
+		int balance;
+		char name[30];
+	public:
+		int input() // creating function input
+		{
+			cout<<"Enter account number, balance ,name of employees\n"; // taking input from user
+			cin>>account_num>>balance>>name;
+		}
+		int output() // creating function output
+		{
+			cout<<account_num<<setw(18)<<balance<<setw(15)<<name<<endl;
+		}
+};
+int main()
+{
+	Account a[100]; // creating obj ie class+obj
+	int n,i;
+	cout<<"Enter number of employees\n"; // asking user for n number of employees
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		a[i].input(); // obj+function
+	}
+	cout<<"account_num"<<setw(10)<<"balance"<<setw(10)<<"name"<<endl;
+	for(i=0;i<n;i++)
+	{
+	    a[i].output(); // obj+function
+    }
+    return 0;
+}
