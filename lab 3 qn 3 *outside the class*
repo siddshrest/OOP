@@ -1,0 +1,39 @@
+// outside the class
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class information // creating class information
+{
+	private:
+		int roll; // 3 data members
+		char name[50];
+		char address[50];
+	public:
+		int input(); // function named input
+		int output(); // funct named output
+};
+int information::input() // using function outside of class
+{
+    cout<<"Enter student roll,name,address\n"; // asking input from user
+	cin>>roll>>name>>address;	
+}
+int information::output() // using function outside of class
+{
+	cout<<roll<<setw(15)<<name<<setw(15)<<address<<endl;
+}
+int main()
+{
+	information a[100];  // creating obj named "a" ie class+obj
+	int n,i;
+	cout<<"enter how many student you want to enter\n";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		a[i].input(); // obj+func
+	}
+	cout<<"roll"<<setw(10)<<"name"<<setw(10)<<"address"<<endl;
+	for(i=0;i<n;i++)
+	{
+		a[i].output(); // obj+funct
+	}
+}
