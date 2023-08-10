@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class toConvert // creating a class named toConvert
+{
+	private:
+		float a; // by qn creating one data member also known as attribute.
+	public:
+		int input() // creating a function named input
+		{
+			cout<<"Enter temperature in Celsius:";
+			cin>>a;
+			a=(a*9/5)+32; // only one data member acc to the qn.
+		}
+		int output() // creating a function named output
+		{
+			cout<<"Temperature in fahrenheit is :"<<a;
+		}
+};
+int main() 
+{
+	toConvert b; // here b is the object ie class+obj
+	b.input(); //obj+function
+	b.output(); //obj+function
+}
