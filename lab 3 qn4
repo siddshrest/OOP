@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class aq // creating a class named aq
+{
+	private:
+		int a,b;
+	public:
+     	int input(); // creating two functions 
+		int comparison();
+};
+int aq::input() // processing outside of the class ie class+function
+{
+	cout<<"enter two no\n"; // asking input from user
+	cin>>a>>b;
+}
+int aq::comparison() // processing outside of the class
+{
+	if(a>b)
+	cout<<a<<"is greater num";
+	else 
+	cout<<b<<"is greater num";
+}
+int main()
+{
+	aq obj; // creating obj ie class + obj
+	obj.input(); //obj+function
+	obj.comparison();
+}
