@@ -1,0 +1,30 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+struct height // creating stucture
+{
+	int feet,inches;
+};
+void input(height &a) //creating input function with structure
+{
+	cout<<"enter feet and inches \n";
+	cin>>a.feet>>a.inches;
+}
+void process(height &a)
+{
+	if(a.inches>=12) // for given condn
+	{
+		a.feet=a.feet+(a.inches/12);
+		a.inches = a.inches%12;
+	}
+}void display(height &a)
+{
+	cout<<"Your height is:\n"<<a.feet<<"'"<<a.inches<<"''";
+}
+int main()
+{
+struct height b;
+input(b);
+process(b);
+display(b);
+}
