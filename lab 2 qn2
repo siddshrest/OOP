@@ -1,0 +1,19 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+float area(float r); // creating a function overloading using function as area
+float area(float len ,float bre);
+float area(float h,float b);
+int main()
+{
+	int r,len,bre,h,b;
+	cout<<"enter radius of circle\n"; // asking user for input
+	cin>>r;
+	cout<<"area of circle :\n"<<(3.14*r*r); // calculation
+	cout<<"\nenter length and breadth of reactangle\n";
+	cin>>len>>bre;
+	cout<<"\narea of reactangle \n"<<(len*bre); // calculation
+	cout<<"\nenter height and base of triangle\n";
+	cin>>h>>b;
+	cout<<"\narea of triangle: \n"<<((b*h)/2);// calculation
+}
